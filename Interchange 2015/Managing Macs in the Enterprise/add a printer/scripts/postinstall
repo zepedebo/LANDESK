@@ -1,0 +1,10 @@
+#!/bin/bash
+
+PRINTER_NAME="Engineering_Colorjet"
+SCRIPT_DIR="`dirname $0`"
+
+echo $SCRIPT_DIR
+
+lpadmin -E -p "$PRINTER_NAME" -v "dnssd://hp%20color%20LaserJet%204600%20%5BC1037F%5D._printer._tcp.local." -P "$SCRIPT_DIR/hp_color_LaserJet_4600__C1037F_.ppd" -o printer-is-shared=false
+cupsenable "$PRINTER_NAME"
+cupsaccept "$PRINTER_NAME"
