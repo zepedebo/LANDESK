@@ -1,0 +1,3 @@
+#!/bin/bash
+
+dscl . -append /Users/Guest AuthenticationAuthority ";DisabledUser;"
