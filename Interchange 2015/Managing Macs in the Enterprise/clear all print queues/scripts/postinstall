@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#From http://hints.macworld.com/article.php?story=20061203221317612
+
+lpstat -p | awk '{print $2}' | while read printer
+do
+  echo "Clearing Queue for Printer:" $printer
+  lprm - -P $printer
+done

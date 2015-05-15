@@ -1,0 +1,15 @@
+#!/bin/bash
+
+OUT_FILE="/Library/Application Support/LANDesk/CustomData/smart.xml"
+
+echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>"  > "$OUT_FILE"
+echo "<SMART_info>" >> "$OUT_FILE"
+
+diskutil list  | egrep "^/" | while read drive
+do
+  DRIVE=`basename $drive`
+  STATUS=`diskutil info $drive | grep SMART | awk '{ $1=$2="" ;print $0 }'`
+  echo "<$DRIVE> $STATUS </$DRIVE>" >> "$OUT_FILE"
+done
+
+echo "</SMART_info>" >> "$OUT_FILE"
