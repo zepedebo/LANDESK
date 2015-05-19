@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo pkgbuild --identifier com.landesk.add_hp_colorjet --nopayload --scripts ./scripts ./add_hp_colorjet.pkg
+PKG_ID=add_hp_colorjet
+
+sudo pkgbuild --identifier com.landesk.$PKG_ID --nopayload --scripts ./scripts ./$PKG_ID.pkg

@@ -1,3 +1,4 @@
 #!/bin/bash
+PKG_ID=gather_smart_info
 
-sudo pkgbuild --identifier com.landesk.gather_smart_info --nopayload --scripts ./scripts ./gather_smart_info.pkg
+sudo pkgbuild --identifier com.landesk.$PKG_ID --nopayload --scripts ./scripts ./$PKG_ID.pkg

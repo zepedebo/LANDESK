@@ -1,3 +1,4 @@
 #!/bin/bash
+PKG_ID=disable_guest
 
-sudo pkgbuild --identifier com.landesk.disable_guest --nopayload --scripts ./scripts ./disable_guest.pkg
+sudo pkgbuild --identifier com.landesk.$PKG_ID --nopayload --scripts ./scripts ./$PKG_ID.pkg

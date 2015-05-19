@@ -1,3 +1,5 @@
 #!/bin/bash
 
-sudo pkgbuild --identifier com.landesk.clear_all_print_queues --nopayload --scripts ./scripts ./clear_all_print_queues.pkg
+PKG_ID=clear_all_print_queues
+
+sudo pkgbuild --identifier com.landesk.$PKG_ID --nopayload --scripts ./scripts ./$PKG_ID.pkg
