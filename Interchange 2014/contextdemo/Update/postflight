@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cp howdy.xml /Library/Application\ Support/LANDesk/scheduler/
+

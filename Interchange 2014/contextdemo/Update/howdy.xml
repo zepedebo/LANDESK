@@ -1,0 +1,13 @@
+<Task xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+	<Triggers>
+		<TimeTrigger id="1">
+			<Enabled>true</Enabled>
+		</TimeTrigger>
+	</Triggers>
+	<Actions>
+		<Exec>
+			<Context>User</Context>
+			<Command>/usr/bin/osascript -e "tell application \"AppleScript Runner\" to display dialog \"Hello Interchange 2014\""</Command>
+		</Exec>
+	</Actions>
+</Task>
