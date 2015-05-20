@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ ! -d /usr/local/bin ]; then
+	mkdir /usr/local/bin
+fi
+
+cp countroot.sh /usr/local/bin
+
+cp countroot.xml /Library/Application\ Support/LANDesk/scheduler

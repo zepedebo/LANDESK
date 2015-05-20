@@ -1,0 +1,15 @@
+<Task xmlns="http://schemas.microsoft.com/windows/2004/02/mit/task">
+	<Triggers>
+		<TimeTrigger id="1">
+			<Enabled>true</Enabled>
+			<Repetition>
+				<Interval>PT86400S</Interval>
+			</Repetition>
+		</TimeTrigger>
+	</Triggers>
+	<Actions>
+		<Exec>
+			<Command>/usr/local/bin/countroot.sh</Command>
+		</Exec>
+	</Actions>
+</Task>
